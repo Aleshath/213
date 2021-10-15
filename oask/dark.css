@@ -1,0 +1,261 @@
+body {
+     margin: 0  auto;
+     background-color: #06141c; /*основной цвет и фон сайта*/
+     width: 100%;
+     height: 100%;
+     padding: 0;
+     margin: 0;
+ }
+ header{ /*шапка*/
+    background-color:#06141c; /*цвет для нижний и верхней вставки ,а также цвет текста*/
+    display:flex; /*огибание элементов*/
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0.5s;
+ }
+ .logo{
+      display: flex;
+      align-items:center;
+    }
+ .logo{
+   padding-right: 15px
+ }
+ .logo-img{
+     margin-top: 15px;
+   }
+ .logo-title{
+     color: #ffe6d4;
+     font-size: 50px;
+     font-weight: bold;
+ }
+ .hor-menu ul li{
+     list-style-type: none;
+     float: left;
+     padding: 15px 0px;
+     color: #ffe6d4;
+ }
+ .hor-menu ul li a{
+   font-size: 30px;
+     color: #f55139;
+     padding-bottom: 15px;
+     padding-left:10px;
+     padding-right:10px;
+     padding-top:15px;
+     text-decoration: none;
+ }
+ .hor-menu ul li a:hover{
+     opacity:1;
+     background: #5e5757;
+     transition:all 0.5s;
+     color:#f55139 ;
+ }
+ .wrapper{
+   max-width: 1200px;
+   margin: 0 auto;
+   display:flex;
+   padding: 20px;
+ }
+ .content{ /*рамка*/
+   max-width: 860px;
+   min-width: 360px;
+   padding: 20px;
+   background-color: #ffc396;
+   border-radius: 20px 20px 20px 20px
+ }
+ .kartinka{ /*картинка*/
+   height: 240px;
+   width: 360px;
+ }
+ .texst{
+  color: #ffe6d4;
+   padding: 0 0 0 20px;
+   font-size: 20px;
+   font-family: "RubikItalic";
+    /*основной текст*/
+ }
+ .texst2{ /*загаловок*/
+   font-size: 40px;
+   color: #ffe6d4;
+   padding: 0 0 0px 20px;
+   font-family: "RubikItalic";
+ }
+ .carousel-wrapper{ /*слайдер */
+   height:200px;
+   position:relative;
+   width:400px;
+
+   margin: auto;
+   margin-top: 20px;
+   border: solid 0px;
+ }
+ .carousel-item{
+   position:absolute;
+   top:0;
+   bottom:0;
+   left:0;
+   right:0;
+   padding:25px 50px;
+   opacity:0;
+   transition: all 0.5s ease-in-out;
+   margin: auto;
+ }
+ .arrow{ /*стрелочки у слайдера*/
+   border: solid #f55139;
+     border-width: 0 3px 3px 0;
+     display: inline-block;
+     padding: 10px;
+ }
+ .arrow-prev{
+   left:-30px;
+   position:absolute;
+   top:50%;
+   transform:translateY(-50%) rotate(135deg);
+ }
+ .arrow-next{
+     right:-30px;
+   position:absolute;
+   top:50%;
+   transform:translateY(-50%) rotate(-45deg);
+   }
+ /*Select every element*/
+ [id^="item"] {
+     display: none;
+   }
+
+ .item-1 {
+     z-index: 2;
+     opacity: 1;
+   }
+
+ *:target ~ .item-1 {
+     opacity: 0;
+   }
+
+ #item-1:target ~ .item-1 {
+     opacity: 1;
+   }
+
+ #item-2:target ~ .item-2, #item-3:target ~ .item-3{
+     z-index: 3;
+     opacity: 1;
+   }
+  #item-3:target ~ .item-3, #item-4:target ~ .item-4{
+    z-index: 4;
+    opacity: 1;
+  }
+ .zagolovok_y_slaidera{
+   color: #ffe6d4;
+   font-size: 25px;
+   font-family: "RubikItalic";
+   text-align: center;
+ }
+table{ /*таблица с названием, видом и ценой товара*/
+  background-color: #ffefe3;
+  margin: auto;
+  text-align: center;
+  width: 1000px;
+  height: 1000px;
+  border: 5px solid #ffc396;
+  border-radius: 80px 80px 80px 80px
+}
+td{
+  font-size: 35px;
+  color: #5e5757;
+}
+.cvet{
+  color: #5e5757;
+}
+.silki{
+  text-decoration: none;
+  font-family: "RubikItalic";
+}
+.zal{
+  padding-top: 50px;
+  padding-left: 1800px;
+  border: 1px orange;
+  padding-bottom: 20px;
+}
+.bol{
+  padding: 40px;
+  font-family: "RubikItalic";
+  font-size: 40px;
+  text-align: center;
+}
+.kons{ /*описание моих консультантов*/
+  justify-content: center;
+  font-size: 20px;
+  text-align: center;
+  margin: 20px;
+  font-family: "RubikItalic";
+  color: #ffe6d4;
+}
+.imgkons{ /*мои консультанты*/
+  margin-top: 20px;
+  padding-left: 850px;
+  max-width: 200px;
+}
+@font-face { /*подключение шрифта*/
+  font-family: "RubikItalic";
+  src: url("../fonts/RubikItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  }
+.feeter{ /*нижняя часть страницы*/
+  padding: 40px;
+  background-color: #000000;
+  display:flex;
+  justify-content: space-between;
+}
+.img-feet{ /*бренды*/
+  margin: auto;
+  max-width: 50px;
+  justify-items: center;
+}
+.o2{ /*доп информация*/
+  background-color: #000000;
+  padding-left: 87%;
+  display: flex;
+}
+.o{
+  font-size: 17px;
+  padding-left: 7px;
+  color:#9f9f9f;
+  text-decoration: none;
+  opacity: 0.9;
+  font-family: "RubikItalic";
+}
+.theme-button{
+  position: absolute;
+  right: 5px;
+  top:5px;
+  display: inline-block;
+  padding: 10px 25px;
+  cursor: pointer;
+  color: #4f4f4f;
+  background: #444;
+}
+.theme-button:hover{
+  background: #555
+}
+.main_content{
+  width: 80%;
+  margin: 0 auto;
+}
+.wrapper{
+  width: 100%;
+}
+
+.header{
+  background: #4a76a8;
+  color: #f4f4f4;
+}
+
+.header_content{
+  padding: 5px;
+}
+.display{
+  display: flex;
+}
